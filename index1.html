@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-blue-600 text-white hidden md:flex flex-col p-6">
+            <h2 class="text-2xl font-bold mb-6">Dashboard</h2>
+            <nav>
+                <ul>
+                    <li class="mt-4"><a href="#" class="block p-2 rounded hover:bg-blue-500">Home</a></li>
+                    <li class="mt-4"><a href="#" class="block p-2 rounded hover:bg-blue-500">Analytics</a></li>
+                    <li class="mt-4"><a href="#" class="block p-2 rounded hover:bg-blue-500">Reports</a></li>
+                    <li class="mt-4"><a href="#" class="block p-2 rounded hover:bg-blue-500">Settings</a></li>
+                    <li class="mt-4"><a href="#" class="block p-2 rounded hover:bg-blue-500">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="mt-auto p-4 bg-blue-500 text-center rounded-lg">
+                <p class="text-sm">User: Admin</p>
+                <p class="text-sm">Last Login: Today</p>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-6 flex flex-col">
+            <!-- Navbar for Mobile -->
+            <div class="md:hidden flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Dashboard</h2>
+                <button id="menu-btn" class="text-white bg-blue-600 px-4 py-2 rounded">Menu</button>
+            </div>
+            
+            <!-- Dashboard Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold">Users</h3>
+                    <p class="text-gray-600 text-lg">1,240</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold">Revenue</h3>
+                    <p class="text-gray-600 text-lg">$34,580</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold">Orders</h3>
+                    <p class="text-gray-600 text-lg">320</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold">Feedback</h3>
+                    <p class="text-gray-600 text-lg">97%</p>
+                </div>
+            </div>
+            
+            <!-- Recent Activity Table -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6 overflow-x-auto">
+                <h3 class="text-xl font-bold mb-4">Recent Activity</h3>
+                <table class="w-full border-collapse border border-gray-200">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="p-3 border">User</th>
+                            <th class="p-3 border">Action</th>
+                            <th class="p-3 border">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-3 border">John Doe</td>
+                            <td class="p-3 border">Logged In</td>
+                            <td class="p-3 border">Today</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td class="p-3 border">Jane Smith</td>
+                            <td class="p-3 border">Updated Profile</td>
+                            <td class="p-3 border">Yesterday</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border">Mike Johnson</td>
+                            <td class="p-3 border">Added Product</td>
+                            <td class="p-3 border">2 Days Ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Notifications Section -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4">Notifications</h3>
+                <ul class="space-y-3">
+                    <li class="bg-gray-100 p-3 rounded">New user registered</li>
+                    <li class="bg-gray-100 p-3 rounded">System update available</li>
+                    <li class="bg-gray-100 p-3 rounded">Weekly report generated</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
